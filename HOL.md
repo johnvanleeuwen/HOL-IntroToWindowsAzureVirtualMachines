@@ -90,7 +90,7 @@ In this task, you will provision a Virtual Machine and configure the Load Balanc
  
 	_Creating VM for IIS Web Farm_
 
-	> **Note:** It might take a few minutes for the VM to appear in the Virtual Machines list.
+	> **Note:** It might take a few minutes for the VM to appear in the Virtual Machines list. 
 
 1. You will now add the second VM for the IIS Load Balancing. In the portal, select **New | Virtual Machine | From Gallery**. 
 
@@ -302,10 +302,6 @@ In this task, you will configure SQL Server 2012. You will create the database t
 
 1. Now, you will update the database's default locations in order to split the DATA from the LOGS. To do this, right click on you SQL Server instance and select **Properties**.
 
-1. In the **Server Properties** dialog, select **Security** from the left side pane.
-
-1. Select the option **SQL Server and Windows Authentication mode**.
-
 1. Select **Database Settings** from the left side pane.
 
 1. Locate the **Database default locations** section and update the default values to point to the disks you attached in the previous task.
@@ -313,6 +309,8 @@ In this task, you will configure SQL Server 2012. You will create the database t
  	![Setting Database Default Locations](./images/Setting-Database-Default-Locations.png?raw=true "Setting Database Default Locations")
  
 	_Setting Database Default Locations_
+
+1. Using Windows Explorer create the following folders: **F:\Data, G:\Logs and G:\Backups**
 
 1.	In order to enable downloads from Internet Explorer you will need to update **Internet Explorer Enhanced Security Configuration**. In the Azure VM, open **Server Manager** from **Start | All Programs | Administrative Tools**.
 
@@ -330,7 +328,9 @@ In this task, you will configure SQL Server 2012. You will create the database t
  
 	>**Note:** Modifying **Internet Explorer Enhanced Security** configurations is not good practice and is only for the purpose of this particular lab. The correct approach should be to download the files locally and then copy them to a shared folder or directly to the VM.
 
-1. This lab uses the **AdventureWorks** database. Open an **Internet Explorer** browser and go to <http://msftdbprodsamples.codeplex.com/> to download  the **SQL Server 2012** sample databases.
+1. This lab uses the **AdventureWorks** database. Open an **Internet Explorer** browser and go to <http://msftdbprodsamples.codeplex.com/> to download  the **SQL Server 2012** sample databases. Once on the page click SQL Server 2012 DW and then download Adventure Works 2012 Data File. 
+
+1. Download the file to F:\Data.
 
 1. Right click the database file and open the properties. Click **unblock**.
 
@@ -353,23 +353,9 @@ In this task, you will configure SQL Server 2012. You will create the database t
  
 	_Attaching AdventureWorks Database_
 
-1. In the **AdventureWorks2012 database details** pane, change the **Data** and the **Log** file paths to the folders you have recently created. 
+1. Select the **AdventureWorks2012** Log entry and click **Remove**.
 
 1. Press **OK** to add the database.
-
-	>**Note:** Follow the steps below if you get the error _"Unable to open the physical file [FILE-NAME].ldf"_ while attaching the database:
-	>
-	> ![attach-sql-error](images/attach-sql-error.png?raw=true "attach sql error")
-	> 
-	> 1. Right click **Databases** folder and select **Attach**..
-	> 1. Add the **AdventureWorks** sample database.
-	> In the **Database details pane** in the Attach Databases dialog, select the log file and click **Remove**.
-	> 1. Click **OK** to create the database. This will attach the database and create the log file in the same location.
-	> 1. Right click your database, select **Tasks | Detach**  and click **OK**.
-	> 1. Open the Data folder in Windows explorer and move the ldf file to the **Logs** folder located in the **Logs** disk.
-	> 1. Right click **Databases** folder and select **Attach** to attach the detached database. 
-	> 1. Locate the **Database details pane** in the Attach Databases dialog, and select the log file you have moved to the Logs disk. Click **OK** to complete attaching the database.
-
 
 1. In the **Databases** folder, locate the new **AdventureWorks2012** database and explore its tables.
 
