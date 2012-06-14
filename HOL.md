@@ -90,7 +90,7 @@ In this task, you will provision a Virtual Machine and configure the Load Balanc
  
 	_Creating VM for IIS Web Farm_
 
-	> **Note:** It might take a few minutes for the VM to appear in the Virtual Machines list. 
+	> **Note:** It will take from 8 to 10 minutes for the Virtual Machine to complete the provisioning process.
 
 1. You will now add the second VM for the IIS Load Balancing. In the portal, select **New | Virtual Machine | From Gallery**. 
 
@@ -110,6 +110,8 @@ In this task, you will provision a Virtual Machine and configure the Load Balanc
 
 1. Wait until the second VM is created. You can check the VM status from the Virtual Machines section within the portal.
 
+	> **Note:** It will take from 8 to 10 minutes for the Virtual Machine to complete the provisioning process.
+
 1. After creating the second VM, you will create an endpoint in the port 80 in the Virtual Machine you created first. To do this, click on the first VM Name (_iisvm1_) to go to the **Dashboard** page and then click **Endpoints**.
 
 1. Click **Add Endpoint** on the bottom pane. Make sure that **Add Endpoint** option is selected and then click the **right arrow** button to continue.
@@ -118,11 +120,13 @@ In this task, you will provision a Virtual Machine and configure the Load Balanc
 
 	_Adding a new Endpoint_
 
-1. In the **Specify endpoint details** page, set the **Name** to _webport_, the **Protocol** to _TCP_ and the **Public Port** and **Private Port** to _80_.
+1. In the **Specify endpoint details** page, set the **Name** to _webport_, the **Protocol** to _TCP_ and the **Public Port** and **Private Port** to _80_. Click the button to create the endpoint.
 
 	![New Endpoint Details](images/new-endpoint-details.png?raw=true "New Endpoint Details")
 
 	_New Endpoint Details_
+
+	> **Note:** It will take some minutes to create a new endpoint.
 
 1. Now, create a new Endpoint in the second VM in order to enable Load Balancing between both VMs. To do this, click **Virtual Machines** and then select the second VM you created. Then, click **Endpoints**.
 
@@ -132,7 +136,9 @@ In this task, you will provision a Virtual Machine and configure the Load Balanc
 
 	_Load Balance Traffic An Existing Endpoint_
 
-1. In the **New Endpoint Details** page, set the **Name** to _webport_ and the **Private Port** to _80_.
+1. In the **New Endpoint Details** page, set the **Name** to _webport_ and the **Private Port** to _80_. Click the button to create the endpoint. 
+
+	> **Note:** It will take some minutes to create a new endpoint.
 
 1. In the **Virtual Machines** section, click on the first VM Name (_iisvm1_) and then click **Endpoints**. 
 
@@ -205,6 +211,8 @@ In this task, you will configure the IIS VMs by adding the necessary roles to de
  
 		_Add Roles Wizard_
 
+> **Note:** It will take some minutes to complete the installation.
+
 1. Close the **Remote Desktop Connection**.
 
 	Repeat this task on the second VM to install IIS, starting from step 4. If you used the proposed name, the second VM should be named **iisvm2**.
@@ -230,6 +238,8 @@ In this task, you will create a new VM using the Windows Azure portal in the sam
 1. In the **VM Options** page, leave the default values and click the button to create a new VM.
 
 1. In the **Virtual Machines** section, you will see the VM you created with a _provisioning_ status. Wait until it changes to _Running_ in order to continue with the following step.
+
+	> **Note:** It will take from 8 to 10 minutes for the Virtual Machine to complete the provisioning process.
 
 <a name="Ex2Task2" /> 
 #### Task 2 - Attaching Empty Disk Images ####
