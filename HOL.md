@@ -90,7 +90,7 @@ In this task, you will provision a Virtual Machine and configure the Load Balanc
  
 	_Creating VM for IIS Web Farm_
 
-	> **Note:** It might take a few minutes for the VM to appear in the Virtual Machines list. 
+	> **Note:** It will take from 8 to 10 minutes for the Virtual Machine to complete the provisioning process.
 
 1. You will now add the second VM for the IIS Load Balancing. In the portal, select **New | Virtual Machine | From Gallery**. 
 
@@ -110,6 +110,8 @@ In this task, you will provision a Virtual Machine and configure the Load Balanc
 
 1. Wait until the second VM is created. You can check the VM status from the Virtual Machines section within the portal.
 
+	> **Note:** It will take from 8 to 10 minutes for the Virtual Machine to complete the provisioning process.
+
 1. After creating the second VM, you will create an endpoint in the port 80 in the Virtual Machine you created first. To do this, click on the first VM Name (_iisvm1_) to go to the **Dashboard** page and then click **Endpoints**.
 
 1. Click **Add Endpoint** on the bottom pane. Make sure that **Add Endpoint** option is selected and then click the **right arrow** button to continue.
@@ -118,11 +120,13 @@ In this task, you will provision a Virtual Machine and configure the Load Balanc
 
 	_Adding a new Endpoint_
 
-1. In the **Specify endpoint details** page, set the **Name** to _webport_, the **Protocol** to _TCP_ and the **Public Port** and **Private Port** to _80_.
+1. In the **Specify endpoint details** page, set the **Name** to _webport_, the **Protocol** to _TCP_ and the **Public Port** and **Private Port** to _80_. Click the button to create the endpoint.
 
 	![New Endpoint Details](images/new-endpoint-details.png?raw=true "New Endpoint Details")
 
 	_New Endpoint Details_
+
+	> **Note:** It will take some minutes to create a new endpoint.
 
 1. Now, create a new Endpoint in the second VM in order to enable Load Balancing between both VMs. To do this, click **Virtual Machines** and then select the second VM you created. Then, click **Endpoints**.
 
@@ -132,7 +136,9 @@ In this task, you will provision a Virtual Machine and configure the Load Balanc
 
 	_Load Balance Traffic An Existing Endpoint_
 
-1. In the **New Endpoint Details** page, set the **Name** to _webport_ and the **Private Port** to _80_.
+1. In the **New Endpoint Details** page, set the **Name** to _webport_ and the **Private Port** to _80_. Click the button to create the endpoint. 
+
+	> **Note:** It will take some minutes to create a new endpoint.
 
 1. In the **Virtual Machines** section, click on the first VM Name (_iisvm1_) and then click **Endpoints**. 
 
@@ -205,6 +211,8 @@ In this task, you will configure the IIS VMs by adding the necessary roles to de
  
 		_Add Roles Wizard_
 
+> **Note:** It will take some minutes to complete the installation.
+
 1. Close the **Remote Desktop Connection**.
 
 	Repeat this task on the second VM to install IIS, starting from step 4. If you used the proposed name, the second VM should be named **iisvm2**.
@@ -230,6 +238,8 @@ In this task, you will create a new VM using the Windows Azure portal in the sam
 1. In the **VM Options** page, leave the default values and click the button to create a new VM.
 
 1. In the **Virtual Machines** section, you will see the VM you created with a _provisioning_ status. Wait until it changes to _Running_ in order to continue with the following step.
+
+	> **Note:** It will take from 8 to 10 minutes for the Virtual Machine to complete the provisioning process.
 
 <a name="Ex2Task2" /> 
 #### Task 2 - Attaching Empty Disk Images ####
@@ -310,15 +320,11 @@ In this task, you will configure SQL Server 2012. You will create the database t
  
 	_Setting Database Default Locations_
 
-1. Using Windows Explorer create the following folders: **F:\Data, G:\Logs and G:\Backups**
+1. Using Windows Explorer create the following folders: **F:\Data, G:\Logs** and **G:\Backups**.
 
 1.	In order to enable downloads from Internet Explorer you will need to update **Internet Explorer Enhanced Security Configuration**. In the Azure VM, open **Server Manager** from **Start | All Programs | Administrative Tools**.
 
 1. In the **Server Manager**, click **Configure IE ESC** within **Security Information** section.
-
-	![Internet Explorer Enhanced Security](images/Internet-Explorer-Enhanced-Security.png?raw=true)
-		
-	_Internet Explorer Enhanced Security_
  
 1. In the **Internet explorer Enhanced Security** configuration, turn **off** the enhanced security for **Administrators** and click **OK**.
 
@@ -328,18 +334,9 @@ In this task, you will configure SQL Server 2012. You will create the database t
  
 	>**Note:** Modifying **Internet Explorer Enhanced Security** configurations is not good practice and is only for the purpose of this particular lab. The correct approach should be to download the files locally and then copy them to a shared folder or directly to the VM.
 
-1. This lab uses the **AdventureWorks** database. Open an **Internet Explorer** browser and go to <http://msftdbprodsamples.codeplex.com/> to download  the **SQL Server 2012** sample databases. Once on the page click SQL Server 2012 DW and then download Adventure Works 2012 Data File. 
-
-1. Download the file to F:\Data.
+1. This lab uses the **AdventureWorks** database. Open an **Internet Explorer** browser and go to <http://msftdbprodsamples.codeplex.com/> to download  the **SQL Server 2012** sample databases. Once on the page click SQL Server 2012 DW and then download Adventure Works 2012 Data File. Download the file to F:\Data.
 
 1. Right click the database file and open the properties. Click **unblock**.
-
-1. In the explorer, open the data disk and create the folder _Data_. Make sure you have write access to that folder.
-
-1. Open the logs disk and create the folder _Logs_. Make sure you have write access to that folder.
-
-1. Copy the database mdf file from the location you have installed it in the folder Data in the data disk. To do this, open the folder where you downloaded **AdventureWorks** and paste it in the data disk.
-
 
 1. Add the **AdventureWorks** sample database to your SQL Server. To do this, in the **SQL Server Management Studio**, locate your SQL Server instance node and expand it. Right click the **Databases** folder and select **Attach**.
 
@@ -347,7 +344,7 @@ In this task, you will configure SQL Server 2012. You will create the database t
 
 	_Attaching the database_
 
-1. In the **Attach Databases** dialog, press **Add**. Browse to the data disk select the Adventure Works data file.
+1. In the **Attach Databases** dialog, press **Add**. Browse to the data disk and select the Adventure Works data file.
 
  	![Attaching AdventureWorks Database](images/attaching-adventureworks-database.png?raw=true)
  
@@ -379,7 +376,7 @@ In this task, you will configure SQL Server 2012. You will create the database t
 
 1. Right-click **AdventureWorksCatalog** and select **Properties**. In the **Full-Text Catalog Properties** dialog, switch to **Tables/Views** page.
 
-1. Add the **Products** table to the **Table/View objects assigned to the Catalog** list. Then, check the _Name_ column and click **OK**.
+1. Add the **Production.Product** table to the **Table/View objects assigned to the Catalog** list. Then, check the _Name_ column and click **OK**.
 
  	![Create New Full-Text Catalog(4)](images/create-new-full-text-catalog4.png?raw=true)
  
@@ -415,7 +412,7 @@ In this task, you will configure SQL Server 2012. You will create the database t
 
 1. Expand **AdventureWorks** database within **Databases** folder. In the **Security/Users** folder, double-click **AzureStore** user.
 
-1. Update the **Database role membership**. Select the _db_owner_ role checkbox for the **AzureStore** user and click **OK**.
+1. Select the **Membership** page, and select the _db_owner_ role checkbox for the **AzureStore** user and click **OK**.
 
  	![Adding Database role membership to AzureStore user](./images/Adding-Database-role-membership-to-AzureStore-user.png?raw=true "Adding Database role membership to AzureStore user")
  
@@ -433,7 +430,7 @@ In this task, you will configure SQL Server 2012. You will create the database t
 
 1. In order to allow the MVC4 application access the SQL Server database you will need to add an **Inbound Rule** for the SQL Server requests in the **Windows Firewall**. To do this, open **Windows Firewall with Advance Security** from **Start | All Programs | Administrative Tools**.
 
-1. Right-click **Inbound Rules** node and select **New Rule** to open the **New Inbound Rule Wizard**.
+1. Select **Inbound Rules** node, right-click it and select **New Rule** to open the **New Inbound Rule Wizard**.
 
  	![Creating an Inbound Rule](./images/Creating-an-Inbound-Rule.png?raw=true "Creating an Inbound Rule")
  
@@ -511,7 +508,7 @@ In this task, you will deploy the MVC4 application to the IIS VMs.
 
 1. Now that you have permissions to download files, open an **Internet Explorer** browser session and navigate to [http://go.microsoft.com/fwlink/?linkid=186916](http://go.microsoft.com/fwlink/?linkid=186916). Download and install **.NET Framework 4.0**.
 
-1. Minimize the **Remote Desktop Connection**, and open the **Web.config** file located in **AzureStore** folder within **Source\Assets** folder of this lab. At the end of the file, replace the connection strings placeholder with the name of your SQL Server (by default, is the VM's name).
+1. Minimize the **Remote Desktop Connection**, and open with **Notepad**, the **Web.config** file located in **AzureStore** folder within **Source\Assets** folder of this lab. At the end of the file, replace the connection strings placeholder with the name of your SQL Server (by default, is the VM's name).
 
 	<!--mark: 1-4-->
 	````XML
