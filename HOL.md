@@ -310,15 +310,11 @@ In this task, you will configure SQL Server 2012. You will create the database t
  
 	_Setting Database Default Locations_
 
-1. Using Windows Explorer create the following folders: **F:\Data, G:\Logs and G:\Backups**
+1. Using Windows Explorer create the following folders: **F:\Data, G:\Logs** and **G:\Backups**.
 
 1.	In order to enable downloads from Internet Explorer you will need to update **Internet Explorer Enhanced Security Configuration**. In the Azure VM, open **Server Manager** from **Start | All Programs | Administrative Tools**.
 
 1. In the **Server Manager**, click **Configure IE ESC** within **Security Information** section.
-
-	![Internet Explorer Enhanced Security](images/Internet-Explorer-Enhanced-Security.png?raw=true)
-		
-	_Internet Explorer Enhanced Security_
  
 1. In the **Internet explorer Enhanced Security** configuration, turn **off** the enhanced security for **Administrators** and click **OK**.
 
@@ -328,18 +324,9 @@ In this task, you will configure SQL Server 2012. You will create the database t
  
 	>**Note:** Modifying **Internet Explorer Enhanced Security** configurations is not good practice and is only for the purpose of this particular lab. The correct approach should be to download the files locally and then copy them to a shared folder or directly to the VM.
 
-1. This lab uses the **AdventureWorks** database. Open an **Internet Explorer** browser and go to <http://msftdbprodsamples.codeplex.com/> to download  the **SQL Server 2012** sample databases. Once on the page click SQL Server 2012 DW and then download Adventure Works 2012 Data File. 
-
-1. Download the file to F:\Data.
+1. This lab uses the **AdventureWorks** database. Open an **Internet Explorer** browser and go to <http://msftdbprodsamples.codeplex.com/> to download  the **SQL Server 2012** sample databases. Once on the page click SQL Server 2012 DW and then download Adventure Works 2012 Data File. Download the file to F:\Data.
 
 1. Right click the database file and open the properties. Click **unblock**.
-
-1. In the explorer, open the data disk and create the folder _Data_. Make sure you have write access to that folder.
-
-1. Open the logs disk and create the folder _Logs_. Make sure you have write access to that folder.
-
-1. Copy the database mdf file from the location you have installed it in the folder Data in the data disk. To do this, open the folder where you downloaded **AdventureWorks** and paste it in the data disk.
-
 
 1. Add the **AdventureWorks** sample database to your SQL Server. To do this, in the **SQL Server Management Studio**, locate your SQL Server instance node and expand it. Right click the **Databases** folder and select **Attach**.
 
@@ -347,7 +334,7 @@ In this task, you will configure SQL Server 2012. You will create the database t
 
 	_Attaching the database_
 
-1. In the **Attach Databases** dialog, press **Add**. Browse to the data disk select the Adventure Works data file.
+1. In the **Attach Databases** dialog, press **Add**. Browse to the data disk and select the Adventure Works data file.
 
  	![Attaching AdventureWorks Database](images/attaching-adventureworks-database.png?raw=true)
  
@@ -379,7 +366,7 @@ In this task, you will configure SQL Server 2012. You will create the database t
 
 1. Right-click **AdventureWorksCatalog** and select **Properties**. In the **Full-Text Catalog Properties** dialog, switch to **Tables/Views** page.
 
-1. Add the **Products** table to the **Table/View objects assigned to the Catalog** list. Then, check the _Name_ column and click **OK**.
+1. Add the **Production.Product** table to the **Table/View objects assigned to the Catalog** list. Then, check the _Name_ column and click **OK**.
 
  	![Create New Full-Text Catalog(4)](images/create-new-full-text-catalog4.png?raw=true)
  
@@ -415,7 +402,7 @@ In this task, you will configure SQL Server 2012. You will create the database t
 
 1. Expand **AdventureWorks** database within **Databases** folder. In the **Security/Users** folder, double-click **AzureStore** user.
 
-1. Update the **Database role membership**. Select the _db_owner_ role checkbox for the **AzureStore** user and click **OK**.
+1. Select the **Membership** page, and select the _db_owner_ role checkbox for the **AzureStore** user and click **OK**.
 
  	![Adding Database role membership to AzureStore user](./images/Adding-Database-role-membership-to-AzureStore-user.png?raw=true "Adding Database role membership to AzureStore user")
  
@@ -433,7 +420,7 @@ In this task, you will configure SQL Server 2012. You will create the database t
 
 1. In order to allow the MVC4 application access the SQL Server database you will need to add an **Inbound Rule** for the SQL Server requests in the **Windows Firewall**. To do this, open **Windows Firewall with Advance Security** from **Start | All Programs | Administrative Tools**.
 
-1. Right-click **Inbound Rules** node and select **New Rule** to open the **New Inbound Rule Wizard**.
+1. Select **Inbound Rules** node, right-click it and select **New Rule** to open the **New Inbound Rule Wizard**.
 
  	![Creating an Inbound Rule](./images/Creating-an-Inbound-Rule.png?raw=true "Creating an Inbound Rule")
  
@@ -511,7 +498,7 @@ In this task, you will deploy the MVC4 application to the IIS VMs.
 
 1. Now that you have permissions to download files, open an **Internet Explorer** browser session and navigate to [http://go.microsoft.com/fwlink/?linkid=186916](http://go.microsoft.com/fwlink/?linkid=186916). Download and install **.NET Framework 4.0**.
 
-1. Minimize the **Remote Desktop Connection**, and open the **Web.config** file located in **AzureStore** folder within **Source\Assets** folder of this lab. At the end of the file, replace the connection strings placeholder with the name of your SQL Server (by default, is the VM's name).
+1. Minimize the **Remote Desktop Connection**, and open with **Notepad**, the **Web.config** file located in **AzureStore** folder within **Source\Assets** folder of this lab. At the end of the file, replace the connection strings placeholder with the name of your SQL Server (by default, is the VM's name).
 
 	<!--mark: 1-4-->
 	````XML
