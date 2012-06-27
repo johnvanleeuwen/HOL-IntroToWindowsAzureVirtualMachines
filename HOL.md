@@ -322,6 +322,8 @@ In this task, you will configure SQL Server 2012. You will create the database t
 
 1. Now, a service restart is necessary for the changes to take effect. In order to restart the service, right click on your SQL Server instance and select **Restart** from the context menu.
 
+1. Restart SQL Server. In the **Object Explorer**, right-click on the server node and select **Restart**. 
+
 1.	In order to enable downloads from Internet Explorer you will need to update **Internet Explorer Enhanced Security Configuration**. In the Azure VM, open **Server Manager** from **Start | All Programs | Administrative Tools**.
 
 1. In the **Server Manager**, click **Configure IE ESC** within **Security Information** section.
