@@ -322,6 +322,8 @@ In this task, you will configure SQL Server 2012. You will create the database t
 
 1. Using Windows Explorer create the following folders: **F:\Data, G:\Logs** and **G:\Backups**.
 
+1. Restart SQL Server. In the **Object Explorer**, right-click on the server node and select **Restart**. 
+
 1.	In order to enable downloads from Internet Explorer you will need to update **Internet Explorer Enhanced Security Configuration**. In the Azure VM, open **Server Manager** from **Start | All Programs | Administrative Tools**.
 
 1. In the **Server Manager**, click **Configure IE ESC** within **Security Information** section.
