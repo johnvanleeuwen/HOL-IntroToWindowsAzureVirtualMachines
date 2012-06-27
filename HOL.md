@@ -84,7 +84,7 @@ In this task, you will provision a Virtual Machine and configure the Load Balanc
 
 		_Creating a VM - VM Options_
 
-1. In the **Virtual Machines** section, you will see the VM you created with a _provisioning_ status. Wait until it changes to _Running_ in order to continue with the following step.
+1. In the **Virtual Machines** section, you will see the VM you created with a _Starting_ status. Wait until it changes to _Running_ in order to continue with the following step.
 
  	![Creating VM for IIS Web Farm](./images/creating-vm-for-iis-web-farm.png?raw=true "Creating VM for IIS Web Farm")
  
