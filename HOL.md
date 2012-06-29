@@ -60,31 +60,31 @@ In this task, you will provision a Virtual Machine and configure the Load Balanc
 
 	_Creating a new Virtual Machine_
  
-	1. In the **VM OS Selection** page, click **Platform Images** on the left menu and select the **Windows Server 2008 R2** OS image from the list. Click the arrow to continue.	
+1. In the **VM OS Selection** page, click **Platform Images** on the left menu and select the **Windows Server 2008 R2 SP1, May 2012** OS image from the list. Click the arrow to continue.	
 
-	1. In the **VM Configuration** page, enter the **Virtual Machine Name** (i.e. "_iisvm1_") and the administrator user's **Password**. Click the **right arrow** to continue.
+1. In the VM Configuration page, enter the Virtual Machine Name (i.e. "iisvm1") and the administrator user's Password. This password needs to contain three of these – lower case characters, uppercase characters, numbers, special characters. Make sure you remember your choice. Click the right arrow to continue.
 
-		![Configuring a Custom VM](images/creating-a-vm-configuration.png?raw=true)
+	![Configuring a Custom VM](images/creating-a-vm-configuration.png?raw=true)
 	 
-		_Creating a VM - Configuration_
+	_Creating a VM - Configuration_
  
-		>**Note:** It is suggested to use secure passwords for admin users, as Windows Azure virtual machines could be accessible from the Internet knowing just their DNS.
-		>
-		>You can also read this document on the Microsoft Security website that will help you select a secure password:  [http://www.microsoft.com/security/online-privacy/passwords-create.aspx](http://www.microsoft.com/security/online-privacy/passwords-create.aspx)
+	>**Note:** It is suggested to use secure passwords for admin users, as Windows Azure virtual machines could be accessible from the Internet knowing just their DNS.
+	>
+	>You can also read this document on the Microsoft Security website that will help you select a secure password:  [http://www.microsoft.com/security/online-privacy/passwords-create.aspx](http://www.microsoft.com/security/online-privacy/passwords-create.aspx)
  
-	1. In the **VM Mode** page, select **Standalone Virtual Machine**, enter the **DNS Name**, select a **Storage Account** or leave the default value _Use Automatically Generated Storage Account_, and select a **Region/Affinity Group/Virtual Network**. Click the **right arrow** to continue. 
+1. In the **VM Mode** page, select **Standalone Virtual Machine**, enter the **DNS Name**, select a **Storage Account** or leave the default value _Use Automatically Generated Storage Account_, and select a **Region/Affinity Group/Virtual Network**. Click the **right arrow** to continue. 
 
-		![Configuring a Custom VM, VM Mode](images/creating-a-vm-vm-mode.png?raw=true)
-	 
-		_Creating a VM - VM Mode_
+	![Configuring a Custom VM, VM Mode](images/creating-a-vm-vm-mode.png?raw=true)
  
-	1. In the **VM Options** page, leave the default values and click the button to create a new VM.
+	_Creating a VM - VM Mode_
 
-		![Creating a VM - VM Options](images/creating-a-vm--vm-options.png?raw=true "Creating a VM - VM Options")
+1. In the **VM Options** page, leave the default values and click the **Finish** button to create a new VM.
 
-		_Creating a VM - VM Options_
+	![Creating a VM - VM Options](images/creating-a-vm--vm-options.png?raw=true "Creating a VM - VM Options")
 
-1. In the **Virtual Machines** section, you will see the VM you created with a _provisioning_ status. Wait until it changes to _Running_ in order to continue with the following step.
+	_Creating a VM - VM Options_
+
+1. In the **Virtual Machines** section, you will see the VM you created with a _Starting (provisioning)_ status. Wait until it changes to _Running_ in order to continue with the following step.
 
  	![Creating VM for IIS Web Farm](./images/creating-vm-for-iis-web-farm.png?raw=true "Creating VM for IIS Web Farm")
  
@@ -94,9 +94,9 @@ In this task, you will provision a Virtual Machine and configure the Load Balanc
 
 1. You will now add the second VM for the IIS Load Balancing. In the portal, select **New | Virtual Machine | From Gallery**. 
 
-1. In the **VM OS Selection** page, click **Platform Images** on the left menu and select the **Windows Server 2008 R2** OS image from the list. Click the **arrow** to continue.	
+1. In the **VM OS Selection** page, click **Platform Images** on the left menu and select the **Windows Server 2008 R2 SP1, May 2012** OS image from the list. Click the **arrow** to continue.	
 
-1. In the **VM Configuration** page, enter the **Virtual Machine Name** (i.e. "_iisvm2_", the administrator user's **Password** and the **Size**. Click the **right arrow** to continue.
+1. In the **VM Configuration** page, enter the **Virtual Machine Name** (i.e. "_iisvm2_"), the administrator user's **Password** and the **Size**. Click the **right arrow** to continue.
  
 1. In the **VM Mode** page, select **Connect to existing Virtual Machine** and choose the first VM you created from the drop down list. Select a **Storage Account** or leave the default value _Use Automatically Generated Storage Account_ and click the **right arrow** to continue. This step adds the new virtual machine to the cloud service created in the previous step. This allows the virtual machines to be on the same network.
 
@@ -181,35 +181,35 @@ In this task, you will configure the IIS VMs by adding the necessary roles to de
 
 1. The **Add Roles Wizard** will appear.
 
-	1.  In the **Before you Begin** page, read the content and click **Next**.
+1.  In the **Before you Begin** page, read the content and click **Next**.
 
-	1. In **Select Server Roles** page, check the **Application Server** and **Web Server (IIS)**. A warning will show, informing the Required Role Services that are missing. Click **Add Required Role Services** to install them and then click **Next**.
+1. In **Select Server Roles** page, check the **Application Server** and **Web Server (IIS)**. A warning will show, informing the Required Role Services that are missing. Click **Add Required Features** to install them and then click **Next**.
 
- 		![Add Roles Wizard(2)](images/add-roles-wizard2.png?raw=true)
- 
-		_Add Roles Wizard_
+	![Add Roles Wizard(2)](images/add-roles-wizard2.png?raw=true)
 
-	1. The **Application Server** page provides a brief introduction about Application Server's capabilities. Click **Next** when you complete reading it.
+	_Add Roles Wizard_
 
-	1. In the **Select Role Services** page for **Application Server**, select **Web Server (IIS)** **Support** and make sure **.NET Framework 3.5.1** is selected. It will prompt a dialog warning about missing Required Role Services. Click **Add Required Role Services** to install them and then click **Next**
+1. The **Application Server** page provides a brief introduction about Application Server's capabilities. Click **Next** when you complete reading it.
 
- 		![Add Roles Wizard(3)](images/add-roles-wizard3.png?raw=true)
- 
-		_Add Roles Wizard_
+1. In the **Select Role Services** page for **Application Server**, select **Web Server (IIS)** **Support** and make sure **.NET Framework 3.5.1** is selected. It will prompt a dialog warning about missing Required Role Services. Click **Add Required Role Services** to install them and then click **Next**
 
-	1. The **Web Server (IIS)** page provides a brief introduction about Web Server (IIS) capabilities. Click **Next** when you complete reading.
+	![Add Roles Wizard(3)](images/add-roles-wizard3.png?raw=true)
 
-	1. The **Select Role Services** page for **Web Server (IIS)** page will display the selected role services that will be installed. Click **Next**.
+	_Add Roles Wizard_
 
- 		![Add Roles Wizard(4)](images/add-roles-wizard4.png?raw=true)
- 
-		_Add Roles Wizard_
+1. The **Web Server (IIS)** page provides a brief introduction about Web Server (IIS) capabilities. Click **Next** when you complete reading.
 
-	1. In the **Confirm Installation Selections** page, make sure the displayed services that will be installed are the ones you have selected (.NET Framework 3.5.1 support and IIS), and then click **Install**.
+1. The **Select Role Services** page for **Web Server (IIS)** page will display the selected role services that will be installed. Click **Next**.
 
- 		![Add Roles Wizard](./images/Add-Roles-Wizard.png?raw=true "Add Roles Wizard")
- 
-		_Add Roles Wizard_
+	![Add Roles Wizard(4)](images/add-roles-wizard4.png?raw=true)
+
+	_Add Roles Wizard_
+
+1. In the **Confirm Installation Selections** page, make sure the displayed services that will be installed are the ones you have selected (.NET Framework 3.5.1 support and IIS), and then click **Install**.
+
+	![Add Roles Wizard](./images/Add-Roles-Wizard.png?raw=true "Add Roles Wizard")
+
+	_Add Roles Wizard_
 
 > **Note:** It will take some minutes to complete the installation.
 
@@ -278,9 +278,7 @@ In this task, you will create two empty data disks and attach them to an existin
  
 	_Disks Management_
 
-1. Locate the disks you created using the **Attach Empty Disk** feature from the Windows Azure Management Portal. Right-click the first disk and select **Initialize Disk**.
-
-1. In the **Initialize Disk** dialog, leave the default values and click **OK**.
+1. The **Initialize Disk** dialog will appear. Leave the default values and click **OK**.
 
 1. Right-click the first disk unallocated space and select **New Simple Volume**.
 
@@ -290,7 +288,7 @@ In this task, you will create two empty data disks and attach them to an existin
 
 1. Follow the **New Simple Volume Wizard**. When asked for the **Volume Label** use _SQLData_.
 
-1. Wait until the process for the first disk is completed. Repeat the steps 15 to 16 but this time using the second disk. Set the **Volume Label** to _SQLLogs_.
+1. Wait until the process for the first disk is completed. Repeat the steps 11 to 12 but this time using the second disk. Set the **Volume Label** to _SQLLogs_.
 
 1. The **Disk Management** list of available disks should now show the **SQLData** and **SQLLogs** disks like in the following figure:
 
@@ -306,21 +304,25 @@ In this task, you will create two empty data disks and attach them to an existin
 
 In this task, you will configure SQL Server 2012. You will create the database that will be used by the MVC4 application and add Full-Text Search capabilities to it. Additionally, you will create a SQL Server user for the MVC4 website.
 
+1. Open Windows Explorer and create the following folders: **F:\Data, G:\Logs** and **G:\Backups**.
+
 1. Open the SQL Server Management Studio from **Start | All Programs | Microsoft SQL Server 2012 | SQL Server Management Studio**.
 
 1. Connect to the SQL Server 2012 default instance using your Windows Account.
 
-1. Now, you will update the database's default locations in order to split the DATA from the LOGS. To do this, right click on you SQL Server instance and select **Properties**.
+1. Now, you will update the database's default locations in order to split the DATA from the LOGS. To do this, right click on your SQL Server instance and select **Properties**.
 
 1. Select **Database Settings** from the left side pane.
 
-1. Locate the **Database default locations** section and update the default values to point to the disks you attached in the previous task.
+1. Locate the **Database default locations** section and update the default values to point to the disks you attached in the previous task and then click "Ok".
 
  	![Setting Database Default Locations](./images/Setting-Database-Default-Locations.png?raw=true "Setting Database Default Locations")
  
 	_Setting Database Default Locations_
 
-1. Using Windows Explorer create the following folders: **F:\Data, G:\Logs** and **G:\Backups**.
+1. Now, a service restart is necessary for the changes to take effect. In order to restart the service, right click on your SQL Server instance and select **Restart** from the context menu.
+
+1. Restart SQL Server. In the **Object Explorer**, right-click on the server node and select **Restart**. 
 
 1.	In order to enable downloads from Internet Explorer you will need to update **Internet Explorer Enhanced Security Configuration**. In the Azure VM, open **Server Manager** from **Start | All Programs | Administrative Tools**.
 
