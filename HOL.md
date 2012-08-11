@@ -1,4 +1,4 @@
-﻿<a name="HOLTop" />
+<a name="HOLTop" />
 # Introduction to Windows Azure Virtual Machines #
 
 ---
@@ -25,7 +25,7 @@ In this hands-on lab, you will learn how to:
 
 The following is required to complete this hands-on lab:
 
-- A Windows Azure subscription with the Virtual Machines Preview enabled - you can sign up for free trial [here](http://bit.ly/WindowsAzureFreeTrial)
+- A Windows Azure subscription with the Virtual Machines Preview enabled - [sign up for a free trial](http://aka.ms/WATK-FreeTrial)
 
 >**Note:** This lab was designed to use Windows 7 Operating System.
 
