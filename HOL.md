@@ -1,4 +1,4 @@
-<a name="HOLTop"></a>
+﻿<a name="HOLTop"></a>
 # Introduction to Windows Azure Virtual Machines #
 
 ---
@@ -509,6 +509,8 @@ In this task, you will deploy the MVC4 application to the IIS VMs.
 		> **Note:** Modifying Internet Explorer Enhanced Security configurations is not a good practice and it only for the purpose of this particular lab. The correct approach would be to download the files locally and then copy them to a shared folder or directly to the VM.
 
 1. Now that you have permissions to download files, open an **Internet Explorer** browser session and navigate to [http://go.microsoft.com/fwlink/?linkid=186916](http://go.microsoft.com/fwlink/?linkid=186916). Download and install **.NET Framework 4.0**.
+
+1. Unzip the AzureStore.zip file into the **Source\Assets\AzureStore** folder.
 
 1. Minimize the **Remote Desktop Connection**, and open with **Notepad**, the **Web.config** file located in **AzureStore** folder within **Source\Assets** folder of this lab. At the end of the file, replace the connection strings placeholder with the name of your SQL Server (by default, is the VM's name).
 
