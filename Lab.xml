@@ -17,7 +17,8 @@
   <Version>1.0.1</Version>
   <Source>.\Source</Source>
   <DependencyChecker></DependencyChecker>
-  <CustomProperties>    
+  <CustomProperties> 
+  	<Property Name="ContentType" Value="Scenario" ></Property>
 	<Property Name="GitHubRepository" Value="https://github.com/WindowsAzure-TrainingKit/HOL-IntroToWindowsAzureVirtualMachines" />
   </CustomProperties>
 </Lab> 
