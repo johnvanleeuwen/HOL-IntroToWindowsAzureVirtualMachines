@@ -6,7 +6,7 @@
 <a name="Overview"></a>
 ## Overview ##
 
-Using Windows Azure as your IaaS platform, will enable you to create and manage your infrastructure quickly, provisioning and accessing any host ubiquitously. Grow your business through the cloud-based infrastructure, reducing the costs of licensing, provisioning and backup.
+Using Windows Azure as your Infrastructure as a Service (IaaS) platform, will enable you to create and manage your infrastructure quickly, provisioning and accessing any host ubiquitously. Grow your business through the cloud-based infrastructure, reducing the costs of licensing, provisioning and backup.
 
 In this hands-on Lab, you will learn how to deploy a simple ASP.NET MVC 4 Web application to a Web server hosted in Windows Azure, using SQL Server and configuring load balancing.
 
@@ -25,7 +25,7 @@ In this hands-on lab, you will learn how to:
 
 The following is required to complete this hands-on lab:
 
-- A Windows Azure subscription with the Virtual Machines Preview enabled - [sign up for a free trial](http://aka.ms/WATK-FreeTrial)
+- A Windows Azure subscription - [sign up for a free trial](http://aka.ms/WATK-FreeTrial)
 
 ---
 
@@ -96,7 +96,7 @@ In this task, you will provision a Virtual Machine and configure the Load Balanc
 
 1. In the **Virtual Machine Configuration** page, set the version release date to **February 12, 2013**. Enter the **Virtual Machine Name** (i.e. "_iisvm2_"), the administrator user's **Password** and the **Size**. Click the **right arrow** to continue.
  
-1. In the **Virtual Machine Mode** page, select **Connect to existing Virtual Machine** and choose the first VM you created from the drop down list. Select a **Storage Account** or leave the default value _Use Automatically Generated Storage Account_ and click the **right arrow** to continue. This step adds the new virtual machine to the cloud service created in the previous step. This allows the virtual machines to be on the same network.
+1. In the **Virtual Machine Mode** page, select **Connect to existing Virtual Machine** and choose the first virtual machine you created from the drop down list. Select a **Storage Account** or leave the default value _Use Automatically Generated Storage Account_ and click the **right arrow** to continue. This step adds the new virtual machine to the cloud service created in the previous step. This allows the virtual machines to be on the same network.
 
 
 	![Configuring a Custom VM, VM Mode](images/creating-a-vm-vm-mode2.png?raw=true)
@@ -108,9 +108,9 @@ In this task, you will provision a Virtual Machine and configure the Load Balanc
 
 1. Wait until the second VM is created. You can check the VM status from the Virtual Machines section within the portal.
 
-	> **Note:** It will take from 8 to 10 minutes for the Virtual Machine to complete the provisioning process.
+	> **Note:** It will take from 8 to 10 minutes for the virtual machine to complete the provisioning process.
 
-1. After creating the second Virtual Machine, you will create an endpoint in the port 80 in the Virtual Machine you created first. To do this, click on the first Virtual Machine Name (_iisvm1_) to go to the **Dashboard** page and then click **Endpoints**. Click **Add Endpoint** on the bottom pane. 
+1. After creating the second virtual machine, you will create an endpoint in the port 80 in the Virtual Machine you created first. To do this, click on the first Virtual Machine Name (_iisvm1_) to go to the **Dashboard** page and then click **Endpoints**. Click **Add Endpoint** on the bottom pane. 
 
 	![Selecting Add Endpoint in the dashboard](images/adding-a-new-endpoint-dashboard.png?raw=true "Selecting Add Endpoint in the dashboard")
 
@@ -302,7 +302,7 @@ In this task, you will create two empty data disks and attach them to an existin
 
 
 <a name="Ex2Task3"></a> 
-#### Task 3 - Configuring SQL Server in the VM ####
+#### Task 3 - Configuring SQL Server in the Virtual Machine ####
 
 In this task, you will configure SQL Server 2012. You will create the database that will be used by the MVC4 application and add Full-Text Search capabilities to it. Additionally, you will create a SQL Server user for the MVC4 website.
 
