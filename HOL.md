@@ -18,7 +18,7 @@ In this hands-on lab, you will learn how to:
 - Create a Web Farm using Windows Azure Management Portal
 - Configure Load Balancing in IIS
 - Deploy a Simple MVC4 Application that consumes SQL Server Features
-- Create a VM with SQL Server Full-Text Search feature to be consumed by the MVC Application
+- Create a Virtual Machine with SQL Server Full-Text Search feature to be consumed by the MVC Application
 
 <a name="Prerequisites"></a>
 ### Prerequisites ###
@@ -34,8 +34,8 @@ The following is required to complete this hands-on lab:
 
 This hands-on lab includes the following exercises:
 
-1. [Creating VMs for IIS](#Exercise1)
-1. [Creating a SQL Server VM](#Exercise2)
+1. [Creating Virtual Machines for IIS](#Exercise1)
+1. [Creating a SQL Server Virtual Machine](#Exercise2)
 1. [Deploying a Simple MVC4 Application](#Exercise3)
 
 Estimated time to complete this lab: **45 minutes**.
@@ -62,7 +62,7 @@ In this task, you will provision a Virtual Machine and configure the Load Balanc
 
 1. In the Virtual Machine Configuration page, set the version release date to **February 12, 2013**. Enter the Virtual Machine Name (i.e. "iisvm1") and the administrator user's Password. This password needs to contain three of these – lower case characters, uppercase characters, numbers and special characters. Make sure you remember your choice. Click the right arrow to continue.
 
-	![Configuring a Custom VM](images/creating-a-vm-configuration.png?raw=true)
+	![Configuring a Custom Virtual Machine](images/creating-a-vm-configuration.png?raw=true)
 	 
 	_Creating a Virtual Machine - Configuration_
  
@@ -72,19 +72,19 @@ In this task, you will provision a Virtual Machine and configure the Load Balanc
  
 1. In the **Virtual Machine Mode** page, select **Standalone Virtual Machine**, enter the **DNS Name**, select a **Storage Account** or leave the default value _Use Automatically Generated Storage Account_, and select a **Region/Affinity Group/Virtual Network**. Click the **right arrow** to continue. 
 
-	![Configuring a Custom VM, VM Mode](images/creating-a-vm-vm-mode.png?raw=true)
+	![Configuring a Custom Virtual Machine, Virtual Machine Mode](images/creating-a-vm-vm-mode.png?raw=true)
  
-	_Creating a Virtual Machine - VM Mode_
+	_Creating a Virtual Machine - Virtual Machine Mode_
 
-1. In the **Virtual Machine Options** page, leave the default values and click the **Finish** button to create a new VM.
+1. In the **Virtual Machine Options** page, leave the default values and click the **Finish** button to create a new Virtual Machine.
 
-	![Creating a VM - VM Options](images/creating-a-vm--vm-options.png?raw=true "Creating a VM - VM Options")
+	![Creating a Virtual Machine - Virtual Machine Options](images/creating-a-vm--vm-options.png?raw=true "Creating a Virtual Machine - Virtual Machine Options")
 
 	_Creating a Virtual Machine - Virtual Machine Options_
 
-1. In the **Virtual Machines** section, you will see the Virtual Machine you created with a _Starting (provisioning)_ status. Wait until it changes to _Running_ in order to continue with the following step as you will need a provisioned VM on the following steps.
+1. In the **Virtual Machines** section, you will see the Virtual Machine you created with a _Starting (provisioning)_ status. Wait until it changes to _Running_ in order to continue with the following step as you will need a provisioned Virtual Machine on the following steps.
 
- 	![Creating VM for IIS Web Farm](./images/creating-vm-for-iis-web-farm.png?raw=true "Creating VM for IIS Web Farm")
+ 	![Creating Virtual Machine for IIS Web Farm](./images/creating-vm-for-iis-web-farm.png?raw=true "Creating Virtual Machine for IIS Web Farm")
  
 	_Creating Virtual Machine for IIS Web Farm_
 
@@ -92,21 +92,21 @@ In this task, you will provision a Virtual Machine and configure the Load Balanc
 
 1. You will now add the second Virtual Machine for the IIS Load Balancing. In the portal, select **New | Compute | Virtual Machine | From Gallery**. 
 
-1. In the **Virtual Machine OS Selection** page, click **Platform Images** on the left menu and select the **Windows Server 2008 R2 SP1, August** OS image from the list. Click the **arrow** to continue.	
+1. In the **Virtual Machine OS Selection** page, click **Platform Images** on the left menu and select the **Windows Server 2008 R2 SP1, February** OS image from the list. Click the **arrow** to continue.	
 
 1. In the **Virtual Machine Configuration** page, set the version release date to **February 12, 2013**. Enter the **Virtual Machine Name** (i.e. "_iisvm2_"), the administrator user's **Password** and the **Size**. Click the **right arrow** to continue.
  
 1. In the **Virtual Machine Mode** page, select **Connect to existing Virtual Machine** and choose the first virtual machine you created from the drop down list. Select a **Storage Account** or leave the default value _Use Automatically Generated Storage Account_ and click the **right arrow** to continue. This step adds the new virtual machine to the cloud service created in the previous step. This allows the virtual machines to be on the same network.
 
 
-	![Configuring a Custom VM, VM Mode](images/creating-a-vm-vm-mode2.png?raw=true)
+	![Configuring a Custom Virtual Machine, Virtual Machine Mode](images/creating-a-vm-vm-mode2.png?raw=true)
 	 
 	_Creating a Virtual Machine - Virtual Machine Mode_
 
  
 1. In the **Virtual Machine Options** page, leave the default values and click the button to create a new Virtual Machine.
 
-1. Wait until the second VM is created. You can check the VM status from the Virtual Machines section within the portal.
+1. Wait until the second Virtual Machine is created. You can check the Virtual Machine status from the Virtual Machines section within the portal.
 
 	> **Note:** It will take from 8 to 10 minutes for the virtual machine to complete the provisioning process.
 
@@ -134,9 +134,9 @@ In this task, you will provision a Virtual Machine and configure the Load Balanc
 
 1. Click **Add Endpoint**, select **Load Balance Traffic On An Existing Endpoint** option. Select the endpoint you created for the first Virtual Machine from the drop down list and then click the **right arrow** to continue.
 
-	![Load Balance Traffic An Existing Endpoint](images/load-balance-traffic-an-an-existing-endpoint.png?raw=true "Load Balance Traffic An Existing Endpoint")
+	![Load Balance Traffic On An Existing Endpoint](images/load-balance-traffic-an-an-existing-endpoint.png?raw=true "Load Balance Traffic An Existing Endpoint")
 
-	_Load Balance Traffic An Existing Endpoint_
+	_Load Balance Traffic On An Existing Endpoint_
 
 1. In the **New Endpoint Details** page, set the **Name** to _webport_ and the **Private Port** to _80_. Click the button to create the endpoint. 
 
@@ -150,14 +150,14 @@ In this task, you will provision a Virtual Machine and configure the Load Balanc
 
 	_Verification: enabling IIS Load Balancing_
 
-1. Click the **Edit Endpoint** button in the bottom bar to enter the endpoint details and verify the load balancing is enabled. Repeat this step in the second VM.
+1. Click the **Edit Endpoint** button in the bottom bar to enter the endpoint details and verify the load balancing is enabled. Repeat this step in the second Virtual Machine.
 
 	![Verification: enabling IIS Load Balancing, details](images/creating-load-balancing-endpoint-2.png?raw=true)
 
 	_Verification: enabling IIS Load Balancing, details_
 
 <a name="Ex1Task2"></a>
-#### Task 2 - Configuring IIS VMs ####
+#### Task 2 - Configuring IIS Virtual Machines ####
 
 In this task, you will configure the IIS Virtual Machines by adding the necessary roles to deploy the MVC application.
 
@@ -222,12 +222,12 @@ In this task, you will configure the IIS Virtual Machines by adding the necessar
 <a name="Exercise2"></a>
 ### Exercise 2: Creating a SQL Server Virtual Machine ###
 
-In this exercise, you will create a new VM and learn how to install SQL Server. You will add disk images to the existing Virtual Machine in order to split the data from the logs generated by SQL Server.
+In this exercise, you will create a new Virtual Machine and learn how to install SQL Server. You will add disk images to the existing Virtual Machine in order to split the data from the logs generated by SQL Server.
 
 <a name="Ex2Task1"></a>
-#### Task 1 - Creating a SQL Server VM ####
+#### Task 1 - Creating a SQL Server Virtual Machine ####
 
-In this task, you will create a new Virtual Machine using the Windows Azure portal in the same Cloud App you deployed the IIS VMs.
+In this task, you will create a new Virtual Machine using the Windows Azure portal in the same Cloud App you deployed the IIS Virtual Machines.
 
 1. In the menu located at the bottom, select **New | Compute | Virtual Machine | From Gallery** to start creating a new virtual machine.
  
@@ -239,7 +239,7 @@ In this task, you will create a new Virtual Machine using the Windows Azure port
  
 1. In the **Virtual Machine Options** page, leave the default values and click the button to create a new Virtual Machine.
 
-1. In the **Virtual Machines** section, you will see the VM you created with a _provisioning_ status. Wait until it changes to _Running_ in order to continue with the following step.
+1. In the **Virtual Machines** section, you will see the Virtual Machine you created with a _provisioning_ status. Wait until it changes to _Running_ in order to continue with the following step.
 
 	> **Note:** It will take from 8 to 10 minutes for the Virtual Machine to complete the provisioning process.
 
@@ -270,7 +270,7 @@ In this task, you will create two empty data disks and attach them to an existin
 
 1. Finally, you need to format the disks in order to access them from the Virtual Machine. To do this, click **Connect** to connect to the Virtual Machine using **Remote Desktop connection**.
 
-1. It will ask you to download the remote desktop settings file. Click **Open** and log on using the Admin credentials you defined when creating the VM.
+1. It will ask you to download the remote desktop settings file. Click **Open** and log on using the Admin credentials you defined when creating the Virtual Machine.
 
 1. In the Virtual Machine, open **Server Manager** from **Start | Administrative Tools**.
 
@@ -324,7 +324,7 @@ In this task, you will configure SQL Server 2012. You will create the database t
 
 1. Restart SQL Server. In the **Object Explorer**, right-click on the server node and select **Restart**. 
 
-1.	In order to enable downloads from Internet Explorer you will need to update **Internet Explorer Enhanced Security Configuration**. In the Azure VM, open **Server Manager** from **Start | Administrative Tools | Server Manager**.
+1.	In order to enable downloads from Internet Explorer you will need to update **Internet Explorer Enhanced Security Configuration**. In the Azure Virtual Machine, open **Server Manager** from **Start | Administrative Tools | Server Manager**.
 
 1. In the **Server Manager**, click **Configure IE ESC** within **Security Information** section.
 
@@ -338,7 +338,7 @@ In this task, you will configure SQL Server 2012. You will create the database t
 	 
 	_Internet Explorer Enhanced Security_
  
-	>**Note:** Modifying **Internet Explorer Enhanced Security** configurations is not good practice and is only for the purpose of this particular lab. The correct approach should be to download the files locally and then copy them to a shared folder or directly to the VM.
+	>**Note:** Modifying **Internet Explorer Enhanced Security** configurations is not good practice and is only for the purpose of this particular lab. The correct approach should be to download the files locally and then copy them to a shared folder or directly to the Virtual Machine.
 
 1. This lab uses the **AdventureWorks** database. Open an **Internet Explorer** browser and go to <http://msftdbprodsamples.codeplex.com/> to download  the **SQL Server 2012** sample databases. Once on the page click on **AdventureWorks Databases – 2008, 2008R2 and 2012** and then download Adventure Works 2012 Data File. Download the file to F:\Data.
 
@@ -456,9 +456,9 @@ In this task, you will configure SQL Server 2012. You will create the database t
 
 1. In the **Action** page, make sure that **Allow the connection** is selected and click **Next**.
 
- 	![New Inbound Rule Wizard(3)](images/new-inbound-rule-wizard3.png?raw=true)
+ 	![Protocol and Ports(3)](images/new-inbound-rule-wizard3.png?raw=true)
  
-	_New Inbound Rule Wizard_
+	_Protocol and Ports_
 
 1. In the **Profile** page, leave the default values and click **Next**.
 
@@ -486,17 +486,17 @@ In this exercise, you will learn how to deploy a simple ASP.NET MVC4 application
 <a name="Ex3Task1"></a>
 #### Task 1 - Deploying a Simple MVC4 Application ####
 
-In this task, you will deploy the MVC4 application to the IIS VMs.
+In this task, you will deploy the MVC4 application to the IIS Virtual Machines.
 
 1. In the Azure Portal, Click **Virtual Machines** on the left menu.
 
-1. You will see a list with your existing VMs. Select the first one you created in Exercise 1 and click **Connect**. If you used the proposed name, this VM's should be named **iisvm1**.
+1. You will see a list with your existing Virtual Machines. Select the first one you created in Exercise 1 and click **Connect**. If you used the proposed name, this Virtual Machine's should be named **iisvm1**.
 
-1. You will be prompted to download the remote desktop client. Click **Open** and log on using the Admin credentials you defined when creating the VM.
+1. You will be prompted to download the remote desktop client. Click **Open** and log on using the Admin credentials you defined when creating the Virtual Machine.
 
 1. You need to install **.NET Framework 4.0** before deploying the MVC4 application. In order to do that, you will enable downloads from IE update **Internet Explorer Enhanced Security Configuration**.
 
-	1. In the Azure VM, open Server Manager from **Start | Administrative Tools**.
+	1. In the Azure Virtual Machine, open Server Manager from **Start | Administrative Tools**.
 
 	1. In the **Server Manager**, click **Configure IE ESC** **within Security Information** **section**.
 
@@ -510,17 +510,17 @@ In this task, you will deploy the MVC4 application to the IIS VMs.
  
 		_Internet Explorer Enhanced Security_
 
-		> **Note:** Modifying Internet Explorer Enhanced Security configurations is not a good practice and it only for the purpose of this particular lab. The correct approach would be to download the files locally and then copy them to a shared folder or directly to the VM.
+		> **Note:** Modifying Internet Explorer Enhanced Security configurations is not a good practice and it only for the purpose of this particular lab. The correct approach would be to download the files locally and then copy them to a shared folder or directly to the Virtual Machine.
 
 1. Now that you have permissions to download files, open an **Internet Explorer** browser session and navigate to [http://go.microsoft.com/fwlink/?linkid=186916](http://go.microsoft.com/fwlink/?linkid=186916). Download and install **.NET Framework 4.0**.
 
-1. Once **.Net Framework 4.0** installation finishes, open **wwwroot** folder located at **C:\inetpub\** and copy the file **CloudShop.zip** located in **CloudShop\Source\Assets** folder of this lab. To do this, copy **CloudShop.zip** (**Ctrl + C**) and paste it (**Ctrl + V**) in the VM's **wwwroot** folder. Extract all files to **C:\inetpub\wwwroot\CloudShop** folder.
+1. Once **.Net Framework 4.0** installation finishes, open **wwwroot** folder located at **C:\inetpub\** and copy the file **CloudShop.zip** located in **CloudShop\Source\Assets** folder of this lab. To do this, copy **CloudShop.zip** (**Ctrl + C**) and paste it (**Ctrl + V**) in the Virtual Machine's **wwwroot** folder. Extract all files to **C:\inetpub\wwwroot\CloudShop** folder.
 
  	![wwwroot folder](./images/wwwroot-folder.png?raw=true "wwwroot folder")
  
 	_wwwroot folder_
 
-1. Open with **Notepad** the **Web.config** file located in **C:\inetpub\wwwroot\CloudShop**. At the end of the file, replace the connection strings placeholder with the name of your SQL Server (by default, is the VM's name).
+1. Open with **Notepad** the **Web.config** file located in **C:\inetpub\wwwroot\CloudShop**. At the end of the file, replace the connection strings placeholder with the name of your SQL Server (by default, is the Virtual Machine's name).
 
 	<!--mark: 1-4-->
 	````XML
@@ -572,7 +572,7 @@ In this task, you will deploy the MVC4 application to the IIS VMs.
 
 1. Close the **Remote Desktop Connection**.
 
-1. Repeat this task in the second VM you created in **Exercise 1 -Task 1**. If you used the proposed name, this VM should be named **iisvm2**.
+1. Repeat this task in the second Virtual Machine you created in **Exercise 1 -Task 1**. If you used the proposed name, this Virtual Machine should be named **iisvm2**.
 
 <a name="Verification"></a> 
 #### Verification ####
@@ -581,7 +581,7 @@ In this task, you will test the Cloud Shop MVC4 application you deployed in the 
 
 1. In your local machine, open **Internet Explorer**.
 
-1. Go to http://[**YOUR-SERVICE-NAME**].cloudapp.net/CloudShop. The Service Name is the one you used when creating the IIS VMs (you can also check it in the Azure Portal, within VM's dashboard).
+1. Go to http://[**YOUR-SERVICE-NAME**].cloudapp.net/CloudShop. The Service Name is the one you used when creating the IIS Virtual Machines (you can also check it in the Azure Portal, within Virtual Machine's dashboard).
 
  	![MVC4 Application running in the Web Farm](./images/MVC4-Application-running-in-the-Web-Farm.png?raw=true "MVC4 Application running in the Web Farm")
  
