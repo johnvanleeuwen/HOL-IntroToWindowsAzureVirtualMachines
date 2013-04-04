@@ -514,13 +514,13 @@ In this task, you will deploy the MVC4 application to the IIS Virtual Machines.
 
 1. Now that you have permissions to download files, open an **Internet Explorer** browser session and navigate to [http://go.microsoft.com/fwlink/?linkid=186916](http://go.microsoft.com/fwlink/?linkid=186916). Download and install **.NET Framework 4.0**.
 
-1. Once **.Net Framework 4.0** installation finishes, open **wwwroot** folder located at **C:\inetpub\** and copy the file **CloudShop.zip** located in **CloudShop\Source\Assets** folder of this lab. To do this, copy **CloudShop.zip** (**Ctrl + C**) and paste it (**Ctrl + V**) in the Virtual Machine's **wwwroot** folder. Extract all files to **C:\inetpub\wwwroot\CloudShop** folder.
+1. Once **.Net Framework 4.0** installation finishes, open **wwwroot** folder located at **C:\inetpub\** and copy the file **CloudShop.zip** located in **Source\Assets\CloudShop** folder of this lab. To do this, copy **CloudShop.zip** (**Ctrl + C**) and paste it (**Ctrl + V**) in the Virtual Machine's **wwwroot** folder. Extract all files to **C:\inetpub\wwwroot\CloudShop** folder.
 
  	![wwwroot folder](./images/wwwroot-folder.png?raw=true "wwwroot folder")
  
 	_wwwroot folder_
 
-1. Open with **Notepad** the **Web.config** file located in **C:\inetpub\wwwroot\CloudShop**. At the end of the file, replace the connection strings placeholder with the name of your SQL Server (by default, is the Virtual Machine's name).
+1. Open with **Notepad** the **Web.config** file located in **C:\inetpub\wwwroot\CloudShop**. Replace the connection strings placeholder with the name of your SQL Server (by default, is the Virtual Machine's name).
 
 	<!--mark: 1-4-->
 	````XML
