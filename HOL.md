@@ -594,3 +594,8 @@ In this task, you will test the Cloud Shop MVC4 application you deployed in the 
 	_Searching Products_
 
 --- 
+
+<a name="summary" />
+## Summary ##
+
+In this hands-on Lab, you have learnt how to deploy a simple ASP.NET MVC 4 Web application to a Web server hosted in Windows Azure, using SQL Server and configuring load balancing.
