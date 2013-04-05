@@ -60,7 +60,7 @@ In this task, you will provision a Virtual Machine and configure the Load Balanc
  
 1. In the **Virtual Machine OS Selection** page, click **Platform Images** on the left menu and select the **Windows Server 2008 R2 SP1** OS image from the list. Click the arrow to continue.	
 
-1. In the Virtual Machine Configuration page, set the version release date to **February 12, 2013**. Enter the Virtual Machine Name (i.e. "iisvm1") and the administrator user's Password. This password needs to contain three of these – lower case characters, uppercase characters, numbers and special characters. Make sure you remember your choice. Click the right arrow to continue.
+1. In the Virtual Machine Configuration page, leave the version release date by default (latest). Enter the Virtual Machine Name (i.e. "iisvm1") and the administrator user's Password. This password needs to contain three of these – lower case characters, uppercase characters, numbers and special characters. Make sure you remember your choice. Click the right arrow to continue.
 
 	![Configuring a Custom Virtual Machine](Images/creating-a-vm-configuration.png?raw=true)
 	 
