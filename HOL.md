@@ -54,7 +54,7 @@ In this task, you will provision a Virtual Machine and configure the Load Balanc
 
 1. In the menu located at the bottom, select **New | Compute | Virtual Machine | From Gallery** to start creating a new virtual machine.
 	 
-	![Creating a new Virtual Machine](images/creating-a-new-virtual-machine.png?raw=true)
+	![Creating a new Virtual Machine](Images/creating-a-new-virtual-machine.png?raw=true)
 
 	_Creating a new Virtual Machine_
  
@@ -62,7 +62,7 @@ In this task, you will provision a Virtual Machine and configure the Load Balanc
 
 1. In the Virtual Machine Configuration page, set the version release date to **February 12, 2013**. Enter the Virtual Machine Name (i.e. "iisvm1") and the administrator user's Password. This password needs to contain three of these – lower case characters, uppercase characters, numbers and special characters. Make sure you remember your choice. Click the right arrow to continue.
 
-	![Configuring a Custom Virtual Machine](images/creating-a-vm-configuration.png?raw=true)
+	![Configuring a Custom Virtual Machine](Images/creating-a-vm-configuration.png?raw=true)
 	 
 	_Creating a Virtual Machine - Configuration_
  
@@ -72,19 +72,19 @@ In this task, you will provision a Virtual Machine and configure the Load Balanc
  
 1. In the **Virtual Machine Mode** page, select **Standalone Virtual Machine**, enter the **DNS Name**, select a **Storage Account** or leave the default value _Use Automatically Generated Storage Account_, and select a **Region/Affinity Group/Virtual Network**. Click the **right arrow** to continue. 
 
-	![Configuring a Custom Virtual Machine, Virtual Machine Mode](images/creating-a-vm-vm-mode.png?raw=true)
+	![Configuring a Custom Virtual Machine, Virtual Machine Mode](Images/creating-a-vm-vm-mode.png?raw=true)
  
 	_Creating a Virtual Machine - Virtual Machine Mode_
 
 1. In the **Virtual Machine Options** page, leave the default values and click the **Finish** button to create a new Virtual Machine.
 
-	![Creating a Virtual Machine - Virtual Machine Options](images/creating-a-vm--vm-options.png?raw=true "Creating a Virtual Machine - Virtual Machine Options")
+	![Creating a Virtual Machine - Virtual Machine Options](Images/creating-a-vm--vm-options.png?raw=true "Creating a Virtual Machine - Virtual Machine Options")
 
 	_Creating a Virtual Machine - Virtual Machine Options_
 
 1. In the **Virtual Machines** section, you will see the Virtual Machine you created with a _Starting (provisioning)_ status. Wait until it changes to _Running_ in order to continue with the following step as you will need a provisioned Virtual Machine on the following steps.
 
- 	![Creating Virtual Machine for IIS Web Farm](./images/creating-vm-for-iis-web-farm.png?raw=true "Creating Virtual Machine for IIS Web Farm")
+ 	![Creating Virtual Machine for IIS Web Farm](./Images/creating-vm-for-iis-web-farm.png?raw=true "Creating Virtual Machine for IIS Web Farm")
  
 	_Creating Virtual Machine for IIS Web Farm_
 
@@ -99,7 +99,7 @@ In this task, you will provision a Virtual Machine and configure the Load Balanc
 1. In the **Virtual Machine Mode** page, select **Connect to existing Virtual Machine** and choose the first virtual machine you created from the drop down list. Select a **Storage Account** or leave the default value _Use Automatically Generated Storage Account_ and click the **right arrow** to continue. This step adds the new virtual machine to the cloud service created in the previous step. This allows the virtual machines to be on the same network.
 
 
-	![Configuring a Custom Virtual Machine, Virtual Machine Mode](images/creating-a-vm-vm-mode2.png?raw=true)
+	![Configuring a Custom Virtual Machine, Virtual Machine Mode](Images/creating-a-vm-vm-mode2.png?raw=true)
 	 
 	_Creating a Virtual Machine - Virtual Machine Mode_
 
@@ -112,19 +112,19 @@ In this task, you will provision a Virtual Machine and configure the Load Balanc
 
 1. After creating the second virtual machine, you will create an endpoint in the port 80 in the Virtual Machine you created first. To do this, click on the first Virtual Machine Name (_iisvm1_) to go to the **Dashboard** page and then click **Endpoints**. Click **Add Endpoint** on the bottom pane. 
 
-	![Selecting Add Endpoint in the dashboard](images/adding-a-new-endpoint-dashboard.png?raw=true "Selecting Add Endpoint in the dashboard")
+	![Selecting Add Endpoint in the dashboard](Images/adding-a-new-endpoint-dashboard.png?raw=true "Selecting Add Endpoint in the dashboard")
 
 	_Selecting Add Endpoint in the dashboard_
 
 1. Make sure that **Add Endpoint** option is selected and then click the **right arrow** button to continue.
 
-	![Adding a new Endpoint](images/adding-a-new-endpoint.png?raw=true "Adding a new Endpoint")
+	![Adding a new Endpoint](Images/adding-a-new-endpoint.png?raw=true "Adding a new Endpoint")
 
 	_Adding a new Endpoint_
 
 1. In the **Specify endpoint details** page, set the **Name** to _webport_, the **Protocol** to _TCP_ and the **Public Port** and **Private Port** to _80_. Click the button to create the endpoint. Wait until the Endpoint is created before continue to the following steps.
 
-	![New Endpoint Details](images/new-endpoint-details.png?raw=true "New Endpoint Details")
+	![New Endpoint Details](Images/new-endpoint-details.png?raw=true "New Endpoint Details")
 
 	_New Endpoint Details_
 
@@ -134,7 +134,7 @@ In this task, you will provision a Virtual Machine and configure the Load Balanc
 
 1. Click **Add Endpoint**, select **Load Balance Traffic On An Existing Endpoint** option. Select the endpoint you created for the first Virtual Machine from the drop down list and then click the **right arrow** to continue.
 
-	![Load Balance Traffic On An Existing Endpoint](images/load-balance-traffic-an-an-existing-endpoint.png?raw=true "Load Balance Traffic An Existing Endpoint")
+	![Load Balance Traffic On An Existing Endpoint](Images/load-balance-traffic-an-an-existing-endpoint.png?raw=true "Load Balance Traffic An Existing Endpoint")
 
 	_Load Balance Traffic On An Existing Endpoint_
 
@@ -146,13 +146,13 @@ In this task, you will provision a Virtual Machine and configure the Load Balanc
 
 1. Select the **webport** endpoint you have created. Make sure the **Load Balancer** column value is **Yes**. 
 
-	![Verification: enabling IIS Load Balancing](images/creating-load-balancing-endpoint-1.png?raw=true)
+	![Verification: enabling IIS Load Balancing](Images/creating-load-balancing-endpoint-1.png?raw=true)
 
 	_Verification: enabling IIS Load Balancing_
 
 1. Click the **Edit Endpoint** button in the bottom bar to enter the endpoint details and verify the load balancing is enabled. Repeat this step in the second Virtual Machine.
 
-	![Verification: enabling IIS Load Balancing, details](images/creating-load-balancing-endpoint-2.png?raw=true)
+	![Verification: enabling IIS Load Balancing, details](Images/creating-load-balancing-endpoint-2.png?raw=true)
 
 	_Verification: enabling IIS Load Balancing, details_
 
@@ -171,13 +171,13 @@ In this task, you will configure the IIS Virtual Machines by adding the necessar
 
 1. In the **Server Manager** window, select **Roles** node.
 
- 	![Server Manager](./images/Server-Manager.png?raw=true "Server Manager")
+ 	![Server Manager](./Images/Server-Manager.png?raw=true "Server Manager")
  
 	_Server Manager_
 
 1. Click **Add Roles** link.
 
- 	![Adding Server Roles](./images/Adding-Server-Roles.png?raw=true "Adding Server Roles")
+ 	![Adding Server Roles](./Images/Adding-Server-Roles.png?raw=true "Adding Server Roles")
  
 	_Adding Server Roles_
 
@@ -187,7 +187,7 @@ In this task, you will configure the IIS Virtual Machines by adding the necessar
 
 1. In the **Select Server Roles** page, check the **Application Server** and **Web Server (IIS)**. A warning will show, informing the Required Role Services that are missing. Click **Add Required Features** to install them and then click **Next**.
 
-	![Add Roles Wizard(2)](images/add-roles-wizard2.png?raw=true)
+	![Add Roles Wizard(2)](Images/add-roles-wizard2.png?raw=true)
 
 	_Add Roles Wizard_
 
@@ -195,7 +195,7 @@ In this task, you will configure the IIS Virtual Machines by adding the necessar
 
 1. In the **Select Role Services** page for **Application Server**, select **Web Server (IIS)** **Support** and make sure **.NET Framework 3.5.1** is selected. It will prompt a dialog warning about missing Required Role Services. Click **Add Required Role Services** to install them and then click **Next**
 
-	![Add Roles Wizard(3)](images/add-roles-wizard3.png?raw=true)
+	![Add Roles Wizard(3)](Images/add-roles-wizard3.png?raw=true)
 
 	_Add Roles Wizard_
 
@@ -203,13 +203,13 @@ In this task, you will configure the IIS Virtual Machines by adding the necessar
 
 1. The **Select Role Services** page for **Web Server (IIS)** page will display the selected role services that will be installed. Click **Next**.
 
-	![Add Roles Wizard(4)](images/add-roles-wizard4.png?raw=true)
+	![Add Roles Wizard(4)](Images/add-roles-wizard4.png?raw=true)
 
 	_Add Roles Wizard_
 
 1. In the **Confirm Installation Selections** page, make sure the displayed services that will be installed are the ones you have selected (.NET Framework 3.5.1 support and IIS), and then click **Install**.
 
-	![Add Roles Wizard](./images/Add-Roles-Wizard.png?raw=true "Add Roles Wizard")
+	![Add Roles Wizard](./Images/Add-Roles-Wizard.png?raw=true "Add Roles Wizard")
 
 	_Add Roles Wizard_
 
@@ -252,7 +252,7 @@ In this task, you will create two empty data disks and attach them to an existin
 
 1. In the Virtual Machine's **Dashboard**, click **Attach** in the menu at the bottom of the page and select **Attach Empty Disk**.
 
-	![Attach Empty Disk](images/attach-empty-disk.png?raw=true "Attach Empty Disk")
+	![Attach Empty Disk](Images/attach-empty-disk.png?raw=true "Attach Empty Disk")
 
 	_Attach Empty Disk_
 
@@ -264,7 +264,7 @@ In this task, you will create two empty data disks and attach them to an existin
 
 	> **Note:** It might take a few minutes until the data disks appear in the Virtual Machine's dashboard within the Azure Portal.
 
- 	![Attached Data Disks](./images/Attached-Data-Disks.png?raw=true "Attached Data Disks")
+ 	![Attached Data Disks](./Images/Attached-Data-Disks.png?raw=true "Attached Data Disks")
  
 	_Attached Data Disks_
 
@@ -276,7 +276,7 @@ In this task, you will create two empty data disks and attach them to an existin
 
 1. Expand **Storage** node and select **Disk Management** option.
 
- 	![Disk Management(2)](images/disk-management2.png?raw=true)
+ 	![Disk Management(2)](Images/disk-management2.png?raw=true)
  
 	_Disks Management_
 
@@ -284,7 +284,7 @@ In this task, you will create two empty data disks and attach them to an existin
 
 1. Right-click the first disk unallocated space and select **New Simple Volume**.
 
- 	![Disk Management](images/disk-management.png?raw=true)
+ 	![Disk Management](Images/disk-management.png?raw=true)
  
 	_Disks Management_
 
@@ -294,7 +294,7 @@ In this task, you will create two empty data disks and attach them to an existin
 
 1. The **Disk Management** list of available disks should now show the **SQLData** and **SQLLogs** disks like in the following figure:
 
- 	![Disks Management](./images/Disks-Management.png?raw=true "Disks Management")
+ 	![Disks Management](./Images/Disks-Management.png?raw=true "Disks Management")
  
 	_Disks Management_
 
@@ -318,7 +318,7 @@ In this task, you will configure SQL Server 2012. You will create the database t
 
 1. Locate the **Database default locations** section and update the default values to point to the disks you attached in the previous task and then click "Ok".
 
- 	![Setting Database Default Locations](./images/Setting-Database-Default-Locations.png?raw=true "Setting Database Default Locations")
+ 	![Setting Database Default Locations](./Images/Setting-Database-Default-Locations.png?raw=true "Setting Database Default Locations")
  
 	_Setting Database Default Locations_
 
@@ -328,13 +328,13 @@ In this task, you will configure SQL Server 2012. You will create the database t
 
 1. In the **Server Manager**, click **Configure IE ESC** within **Security Information** section.
 
- 	![Configuring IE ESC](./images/configuring-internet-explorer-enhanced-security-configuration.png?raw=true "Configuring IE ESC")
+ 	![Configuring IE ESC](./Images/configuring-internet-explorer-enhanced-security-configuration.png?raw=true "Configuring IE ESC")
  
 	_Configuring IE ESC_
 
 1. In the **Internet explorer Enhanced Security** configuration, turn **off** the enhanced security for **Administrators** and click **OK**.
 
-	![Internet Explorer Enhanced Security(2)](images/internet-explorer-enhanced-security2.png?raw=true)
+	![Internet Explorer Enhanced Security(2)](Images/internet-explorer-enhanced-security2.png?raw=true)
 	 
 	_Internet Explorer Enhanced Security_
  
@@ -346,7 +346,7 @@ In this task, you will configure SQL Server 2012. You will create the database t
 
 1. Add the **AdventureWorks** sample database to your SQL Server. To do this, in the **SQL Server Management Studio**, locate your SQL Server instance node and expand it. Right click the **Databases** folder and select **Attach**.
 
-	![Attaching the database](images/attaching-adventureworks-database-menu.png?raw=true)
+	![Attaching the database](Images/attaching-adventureworks-database-menu.png?raw=true)
 
 	_Attaching the database_
 
@@ -354,7 +354,7 @@ In this task, you will configure SQL Server 2012. You will create the database t
 
 1. Select the **AdventureWorks2012** Log entry and click **Remove**.
 
- 	![Removing AdventureWorks2012 Log entry](images/removing-adventureworks-log-entry.png?raw=true)
+ 	![Removing AdventureWorks2012 Log entry](Images/removing-adventureworks-log-entry.png?raw=true)
  
 	_Removing AdventureWorks2012 Log entry_
 
@@ -362,7 +362,7 @@ In this task, you will configure SQL Server 2012. You will create the database t
 
 1. In the **Databases** folder, locate the new **AdventureWorks2012** database and explore its tables.
 
- 	![AdventureWorks Sample Database](./images/adventureworks-sample-database.png?raw=true "Northwind Sample Database")
+ 	![AdventureWorks Sample Database](./Images/adventureworks-sample-database.png?raw=true "Northwind Sample Database")
  
 	_AdventureWorks Sample Database_
 
@@ -370,19 +370,19 @@ In this task, you will configure SQL Server 2012. You will create the database t
 
 	> **Note:** You are creating a Full Text Catalog for the database that will be used later by the MVC application. 
 
- 	![Create New Full-Text Catalog(2)](images/create-new-full-text-catalog2.png?raw=true)
+ 	![Create New Full-Text Catalog(2)](Images/create-new-full-text-catalog2.png?raw=true)
  
 	_Create New Full-Text Catalog_
 
 1. In the New Full-Text Catalog dialog, set the **Name** value to _AdventureWorksCatalog_ and press **OK**.
 
- 	![Create New Full-Text Catalog(3)](images/create-new-full-text-catalog3.png?raw=true)
+ 	![Create New Full-Text Catalog(3)](Images/create-new-full-text-catalog3.png?raw=true)
  
 	_Create New Full-Text Catalog_
 
 1. Check that the Full-Text Catalog you created appears in the **Full-Text Catalogs** folder.
 
- 	![Create New Full-Text Catalog(4)](images/create-new-full-text-catalog5.png?raw=true)
+ 	![Create New Full-Text Catalog(4)](Images/create-new-full-text-catalog5.png?raw=true)
  
 	_Create New Full-Text Catalog_
 
@@ -390,13 +390,13 @@ In this task, you will configure SQL Server 2012. You will create the database t
 
 1. Add the **Production.Product** table to the **Table/View objects assigned to the Catalog** list. Then, check the _Name_ column and click **OK**.
 
- 	![Create New Full-Text Catalog(5)](images/create-new-full-text-catalog4.png?raw=true)
+ 	![Create New Full-Text Catalog(5)](Images/create-new-full-text-catalog4.png?raw=true)
  
 	_Create New Full-Text Catalog_
 
 1. Add a new user for the MVC4 application you will deploy in the following exercise. To do this, expand **Security** folder within the SQL Server instance. Right-click **Logins** folder and select **New Login**.
 
- 	![Creating a New Login(2)](images/creating-a-new-login2.png?raw=true)
+ 	![Creating a New Login(2)](Images/creating-a-new-login2.png?raw=true)
  
 	_Creating a New Login_
 
@@ -406,13 +406,13 @@ In this task, you will configure SQL Server 2012. You will create the database t
 
 1. Unselect **Enforce password policy** checkbox to avoid having to change the password the first time you log on, and set the **Default database** to _AdventureWorks_.
 
- 	![Creating a New Login](./images/Creating-a-New-Login.png?raw=true "Creating a New Login")
+ 	![Creating a New Login](./Images/Creating-a-New-Login.png?raw=true "Creating a New Login")
  
 	_Creating a New Login_
 
 1. Click **User Mapping** on the left pane. Select the map checkbox in the _AdventureWorks_ database row and click **OK**.
 
- 	![Mapping the new User to the AdventureWorks Database](./images/mapping-new-user-database-2.png?raw=true "Mapping the new User to the AdventureWorks Database")
+ 	![Mapping the new User to the AdventureWorks Database](./Images/mapping-new-user-database-2.png?raw=true "Mapping the new User to the AdventureWorks Database")
  
 	_Mapping the new User to the AdventureWorks Database_
 
@@ -420,7 +420,7 @@ In this task, you will configure SQL Server 2012. You will create the database t
 
 1. Select the **Membership** page, and select the _db_owner_ role checkbox for the **CloudShop** user and click **OK**.
 
- 	![Adding Database role membership to CloudShop user](./images/Adding-Database-role-membership-to-CloudShop-user.png?raw=true "Adding Database role membership to CloudShop user")
+ 	![Adding Database role membership to CloudShop user](./Images/Adding-Database-role-membership-to-CloudShop-user.png?raw=true "Adding Database role membership to CloudShop user")
  
 	_Adding Database role membership to CloudShop user_
 
@@ -438,25 +438,25 @@ In this task, you will configure SQL Server 2012. You will create the database t
 
 1. Select **Inbound Rules** node, right-click it and select **New Rule** to open the **New Inbound Rule Wizard**.
 
- 	![Creating an Inbound Rule](./images/Creating-an-Inbound-Rule.png?raw=true "Creating an Inbound Rule")
+ 	![Creating an Inbound Rule](./Images/Creating-an-Inbound-Rule.png?raw=true "Creating an Inbound Rule")
 
 	_Creating an Inbound Rule_
 
 1. In the **Rule Type** page, select **Port** and click **Next**.
 
-	![New Inbound Rule Wizard](images/new-inbound-rule-wizard2.png?raw=true)
+	![New Inbound Rule Wizard](Images/new-inbound-rule-wizard2.png?raw=true)
  
 	_New Inbound Rule Wizard_
 
 1. In **Protocols and Ports** page, leave TCP selected, select **Specific local ports,** and set its  value to _1433_. Click **Next** to continue.
 
- 	![New Inbound Rule Wizard](images/new-inbound-rule-wizard.png?raw=true)
+ 	![New Inbound Rule Wizard](Images/new-inbound-rule-wizard.png?raw=true)
  
 	_New Inbound Rule Wizard_
 
 1. In the **Action** page, make sure that **Allow the connection** is selected and click **Next**.
 
- 	![Protocol and Ports(3)](images/new-inbound-rule-wizard3.png?raw=true)
+ 	![Protocol and Ports(3)](Images/new-inbound-rule-wizard3.png?raw=true)
  
 	_Protocol and Ports_
 
@@ -464,7 +464,7 @@ In this task, you will configure SQL Server 2012. You will create the database t
 
 1. In the **Name** page, set the Inbound Rule's **Name** to _SQLServerRule_ and click **Finish**
 
- 	![New Inbound Rule Wizard(4)](images/new-inbound-rule-wizard4.png?raw=true)
+ 	![New Inbound Rule Wizard(4)](Images/new-inbound-rule-wizard4.png?raw=true)
  
 	_New Inbound Rule Wizard_
 
@@ -500,13 +500,13 @@ In this task, you will deploy the MVC4 application to the IIS Virtual Machines.
 
 	1. In the **Server Manager**, click **Configure IE ESC** **within Security Information** **section**.
 
- 		![Internet Explorer Enhanced Security(3)](images/internet-explorer-enhanced-security3.png?raw=true)
+ 		![Internet Explorer Enhanced Security(3)](Images/internet-explorer-enhanced-security3.png?raw=true)
  
 		_Internet Explorer Enhanced Security_
 
 	1. In the **Internet explorer Enhanced Security** dialog, turn **off** enhanced security for **Administrators** and click **OK**.
 
- 		![Internet Explorer Enhanced Security](./images/Internet-Explorer-Enhanced-Security.png?raw=true "Internet Explorer Enhanced Security")
+ 		![Internet Explorer Enhanced Security](./Images/Internet-Explorer-Enhanced-Security.png?raw=true "Internet Explorer Enhanced Security")
  
 		_Internet Explorer Enhanced Security_
 
@@ -516,7 +516,7 @@ In this task, you will deploy the MVC4 application to the IIS Virtual Machines.
 
 1. Once **.Net Framework 4.0** installation finishes, open **wwwroot** folder located at **C:\inetpub\** and copy the file **CloudShop.zip** located in **Source\Assets\CloudShop** folder of this lab. To do this, copy **CloudShop.zip** (**Ctrl + C**) and paste it (**Ctrl + V**) in the Virtual Machine's **wwwroot** folder. Extract all files to **C:\inetpub\wwwroot\CloudShop** folder.
 
- 	![wwwroot folder](./images/wwwroot-folder.png?raw=true "wwwroot folder")
+ 	![wwwroot folder](./Images/wwwroot-folder.png?raw=true "wwwroot folder")
  
 	_wwwroot folder_
 
@@ -534,37 +534,37 @@ In this task, you will deploy the MVC4 application to the IIS Virtual Machines.
 
 1. In the **Connections** pane, expand **Default Web Site** within your IIS Server's node. You will see the **CloudShop** folder you copied in the **wwwroot** folder.
 
- 	![IIS Manager](./images/IIS-Manager.png?raw=true "IIS Manager")
+ 	![IIS Manager](./Images/IIS-Manager.png?raw=true "IIS Manager")
  
 	_IIS Manager_
 
 1. Right-click **CloudShop** folder and select **Convert to Application**.
 
- 	![IIS Manager Convert to Application](images/iis-manager-convert-to-application.png?raw=true)
+ 	![IIS Manager Convert to Application](Images/iis-manager-convert-to-application.png?raw=true)
  
 	_IIS Manager - Convert to Application_
 
 1. In the **Add Application** dialog, click **OK**.
 
- 	![Add Application dialog](./images/Add-Application-dialog.png?raw=true "Add Application dialog")
+ 	![Add Application dialog](./Images/Add-Application-dialog.png?raw=true "Add Application dialog")
  
 	_Add Application dialog_
 
 1. Finally, select the **Application Pools** node and double-click **DefaultAppPool** application pool.
 
- 	![Updating Default Application Pool](./images/Updating-Default-Application-Pool.png?raw=true "Updating Default Application Pool")
+ 	![Updating Default Application Pool](./Images/Updating-Default-Application-Pool.png?raw=true "Updating Default Application Pool")
  
 	_Updating Default Application Pool_
 
 1. In the **Edit Application Pool** dialog, change the **.Net Framework** version to **v4.0** and click **OK**.
 
- 	![Editing Application Pool](./images/Editing-Application-Pool.png?raw=true "Editing Application Pool")
+ 	![Editing Application Pool](./Images/Editing-Application-Pool.png?raw=true "Editing Application Pool")
  
 	_Editing Application Pool_
 
 1. Now, the **DefaultAppPool's** .Net Framework should be **v4.0** instead of v2.0.
 
- 	![Updating Default Application Pool](./images/Updating-Default-Application-Pool-Updated.png?raw=true "Updating Default Application Pool")
+ 	![Updating Default Application Pool](./Images/Updating-Default-Application-Pool-Updated.png?raw=true "Updating Default Application Pool")
  
 	_Updating Default Application Pool_
 
@@ -583,13 +583,13 @@ In this task, you will test the Cloud Shop MVC4 application you deployed in the 
 
 1. Go to http://[**YOUR-SERVICE-NAME**].cloudapp.net/CloudShop. The Service Name is the one you used when creating the IIS Virtual Machines (you can also check it in the Azure Portal, within Virtual Machine's dashboard).
 
- 	![MVC4 Application running in the Web Farm](./images/MVC4-Application-running-in-the-Web-Farm.png?raw=true "MVC4 Application running in the Web Farm")
+ 	![MVC4 Application running in the Web Farm](./Images/MVC4-Application-running-in-the-Web-Farm.png?raw=true "MVC4 Application running in the Web Farm")
  
 	_MVC4 Application running in the Web Farm_
 
 1. In the **Search** box, write _Classic_ and click **Search**. It will show all the products that have a product name that match the search criteria.
 
- 	![Searching Products(2)](images/searching-products2.png?raw=true)
+ 	![Searching Products(2)](Images/searching-products2.png?raw=true)
  
 	_Searching Products_
 
