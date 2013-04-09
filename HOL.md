@@ -60,7 +60,7 @@ In this task, you will provision a Virtual Machine and configure the Load Balanc
  
 1. In the **Virtual Machine OS Selection** page, click **Platform Images** on the left menu and select the **Windows Server 2008 R2 SP1** OS image from the list. Click the arrow to continue.	
 
-1. In the Virtual Machine Configuration page, set the version release date to **February 12, 2013**. Enter the Virtual Machine Name (i.e. "iisvm1") and the administrator user's Password. This password needs to contain three of these – lower case characters, uppercase characters, numbers and special characters. Make sure you remember your choice. Click the right arrow to continue.
+1. In the **Virtual Machine Configuration** page, set the version release date to **February 12, 2013**. Enter the Virtual Machine Name (i.e. "iisvm1"), provide a user name for the **New User Name** field and a password for the **New Password** and **Confirm Password** fields. This password needs to contain three of these – lower case characters, uppercase characters, numbers and special characters. Make sure you remember your choice. Lastly, set the Virtual Machine **Size** to _Small_ and click **Next** to continue.
 
 	![Configuring a Custom Virtual Machine](Images/creating-a-vm-configuration.png?raw=true)
 	 
@@ -94,7 +94,7 @@ In this task, you will provision a Virtual Machine and configure the Load Balanc
 
 1. In the **Virtual Machine OS Selection** page, click **Platform Images** on the left menu and select the **Windows Server 2008 R2 SP1, February** OS image from the list. Click the **arrow** to continue.	
 
-1. In the **Virtual Machine Configuration** page, set the version release date to **February 12, 2013**. Enter the **Virtual Machine Name** (i.e. "_iisvm2_"), the administrator user's **Password** and the **Size**. Click the **right arrow** to continue.
+1. In the **Virtual Machine Configuration** page, set the version release date to **February 12, 2013**. Enter the **Virtual Machine Name** (i.e. "_iisvm2_"), a **User Name**, a **Password** and the **Size**. Click the **right arrow** to continue.
  
 1. In the **Virtual Machine Mode** page, select **Connect to existing Virtual Machine** and choose the first virtual machine you created from the drop down list. Select a **Storage Account** or leave the default value _Use Automatically Generated Storage Account_ and click the **right arrow** to continue. This step adds the new virtual machine to the cloud service created in the previous step. This allows the virtual machines to be on the same network.
 
@@ -165,7 +165,7 @@ In this task, you will configure the IIS Virtual Machines by adding the necessar
 
 1. You will see a list with your existing Virtual Machines. Select the first one you created in Task 1 and click the **Connect** button in the bottom bar. If you used the proposed name, this Virtual Machine should be named **iisvm1**.
 
-1. You will be asked to download the remote desktop settings file. Click **Open** and log on using the Admin credentials you defined when creating the Virtual Machine.
+1. You will be asked to download the remote desktop settings file. Click **Open** and log on using the credentials you defined when creating the Virtual Machine.
 
 1. In the Azure Virtual Machine, open **Server Manager** from **Start | Administrative Tools**.
 
@@ -233,7 +233,7 @@ In this task, you will create a new Virtual Machine using the Windows Azure port
  
 1. In the **Virtual Machine OS Selection** page, click **Platform Images** on the left menu and select the **Microsoft SQL Server 2012** image from the list. Click the arrow to continue.	
 
-1. In the **Virtual Machine Configuration** page, enter the **Virtual Machine Name** (i.e. "_sqlvm1_"), the administrator user's **Password** and the **Size**. Click the **right arrow** to continue.
+1. In the **Virtual Machine Configuration** page, enter the **Virtual Machine Name** (i.e. "_sqlvm1_"), a **User Name**, a **Password** and the **Size**. Click the **right arrow** to continue.
  
 1. In the **Virtual Machine Mode** page, select **Connect to existing Virtual Machine** and choose the first IIS Virtual Machine you created from the drop down list (_iisvm1_). Click the **right arrow** to continue.
  
@@ -270,9 +270,9 @@ In this task, you will create two empty data disks and attach them to an existin
 
 1. Finally, you need to format the disks in order to access them from the Virtual Machine. To do this, click **Connect** to connect to the Virtual Machine using **Remote Desktop connection**.
 
-1. It will ask you to download the remote desktop settings file. Click **Open** and log on using the Admin credentials you defined when creating the Virtual Machine.
+1. It will ask you to download the remote desktop settings file. Click **Open** and log on using the credentials you defined when creating the Virtual Machine.
 
-1. In the Virtual Machine, open **Server Manager** from **Start | Administrative Tools**.
+1. In the virtual machine, open **Server Manager** from **Start | Administrative Tools**.
 
 1. Expand **Storage** node and select **Disk Management** option.
 
@@ -340,17 +340,17 @@ In this task, you will configure SQL Server 2012. You will create the database t
  
 	>**Note:** Modifying **Internet Explorer Enhanced Security** configurations is not good practice and is only for the purpose of this particular lab. The correct approach should be to download the files locally and then copy them to a shared folder or directly to the Virtual Machine.
 
-1. This lab uses the **AdventureWorks** database. Open an **Internet Explorer** browser and go to <http://msftdbprodsamples.codeplex.com/> to download  the **SQL Server 2012** sample databases. Once on the page click on **AdventureWorks Databases – 2008, 2008R2 and 2012** and then download Adventure Works 2012 Data File. Download the file to F:\Data.
+1. This lab uses the **AdventureWorks2012** database. Open an **Internet Explorer** browser and go to <http://msftdbprodsamples.codeplex.com/> to download  the **SQL Server 2012** sample databases. Once on the page click on **AdventureWorks Databases – 2008, 2008R2 and 2012** and then download Adventure Works 2012 Data File. Download the file to F:\Data.
 
-	>**Note:** The **AdventureWorks** database can also be downloaded as a .zip file. If you choose this format, right-click the file to open its properties window and then click **Unblock**. Then, extract the database to F:\Data.
+	>**Note:** The **AdventureWorks2012** database can also be downloaded as a .zip file. If you choose this format, right-click the file to open its properties window and then click **Unblock**. Then, extract the database to F:\Data.
 
-1. Add the **AdventureWorks** sample database to your SQL Server. To do this, in the **SQL Server Management Studio**, locate your SQL Server instance node and expand it. Right click the **Databases** folder and select **Attach**.
+1. Add the **AdventureWorks2012** sample database to your SQL Server. To do this, in the **SQL Server Management Studio**, locate your SQL Server instance node and expand it. Right click the **Databases** folder and select **Attach**.
 
 	![Attaching the database](Images/attaching-adventureworks-database-menu.png?raw=true)
 
 	_Attaching the database_
 
-1. In the **Attach Databases** dialog, press **Add**. Browse to the data disk and select the Adventure Works data file.
+1. In the **Attach Databases** dialog, press **Add**. Browse to the data disk and select the Adventure Works 2012 data file.
 
 1. Select the **AdventureWorks2012** Log entry and click **Remove**.
 
@@ -366,7 +366,7 @@ In this task, you will configure SQL Server 2012. You will create the database t
  
 	_AdventureWorks Sample Database_
 
-1. Expand **Storage** node within **AdventureWorks** database, right-click **Full Text Catalogs** folder and select **New Full-Text Catalog**.
+1. Expand **Storage** node within **AdventureWorks2012** database, right-click **Full Text Catalogs** folder and select **New Full-Text Catalog**.
 
 	> **Note:** You are creating a Full Text Catalog for the database that will be used later by the MVC application. 
 
@@ -404,19 +404,19 @@ In this task, you will configure SQL Server 2012. You will create the database t
 
 	> **Note:** If you enter a different username or password than those suggested in this step, do not forget in the next exercise to update the web.config file of the MVC4 application to match those values.
 
-1. Unselect **Enforce password policy** checkbox to avoid having to change the password the first time you log on, and set the **Default database** to _AdventureWorks_.
+1. Unselect **Enforce password policy** checkbox to avoid having to change the password the first time you log on, and set the **Default database** to _AdventureWorks2012_.
 
  	![Creating a New Login](./Images/Creating-a-New-Login.png?raw=true "Creating a New Login")
  
 	_Creating a New Login_
 
-1. Click **User Mapping** on the left pane. Select the map checkbox in the _AdventureWorks_ database row and click **OK**.
+1. Click **User Mapping** on the left pane. Select the map checkbox in the _AdventureWorks2012_ database row and click **OK**.
 
  	![Mapping the new User to the AdventureWorks Database](./Images/mapping-new-user-database-2.png?raw=true "Mapping the new User to the AdventureWorks Database")
  
 	_Mapping the new User to the AdventureWorks Database_
 
-1. Expand **AdventureWorks** database within **Databases** folder. In the **Users** folder under **Security**, double-click **CloudShop** user.
+1. Expand **AdventureWorks2012** database within **Databases** folder. In the **Users** folder under **Security**, double-click **CloudShop** user.
 
 1. Select the **Membership** page, and select the _db_owner_ role checkbox for the **CloudShop** user and click **OK**.
 
