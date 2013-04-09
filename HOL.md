@@ -448,7 +448,7 @@ In this task, you will configure SQL Server 2012. You will create the database t
  
 	_New Inbound Rule Wizard_
 
-1. In **Protocols and Ports** page, leave TCP selected, select **Specific local ports,** and set its  value to _1433_. Click **Next** to continue.
+1. In **Protocol and Ports** page, leave TCP selected, select **Specific local ports,** and set its  value to _1433_. Click **Next** to continue.
 
  	![New Inbound Rule Wizard](Images/new-inbound-rule-wizard.png?raw=true)
  
