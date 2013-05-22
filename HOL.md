@@ -50,7 +50,7 @@ In this exercise, you will learn how to create a Virtual Machine in Windows Azur
 
 In this task, you will provision a Virtual Machine and configure the Load Balancing to host an MVC4 application.
 
-1. Open Internet Explorer and browse [https://manage.windowsazure.com/](https://manage.windowsazure.com/) to enter the Windows Azure portal. Then, log in with your credentials.
+1. Open Internet Explorer and browse to [https://manage.windowsazure.com/](https://manage.windowsazure.com/) to enter the Windows Azure portal. Then, log in with your credentials.
 
 1. In the menu located at the bottom, select **New | Compute | Virtual Machine | From Gallery** to start creating a new virtual machine.
 	 
