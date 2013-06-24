@@ -12,7 +12,7 @@
   <Description>In this hands-on lab you will learn how to deploy a simple ASP.NET MVC 4 Web application to a Web server hosted in Windows Azure, using SQL Server and configuring load balancing.</Description>
   <Document ConversionType="Html">.\HOL.md</Document>
   <Title>Introduction to Windows Azure Virtual Machines</Title>
-  <Version>1.0.3</Version>
+  <Version>1.0.4</Version>
   <Source>.\Source</Source>
   <DependencyChecker></DependencyChecker>
   <CustomProperties>
